@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swadisht Meals - Your Daily Homemade Tiffin</title>
+    <!-- Using Google Fonts for a clean, modern look (Poppins) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Using Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Embedded CSS for the design -->
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fcfcfc; /* Very light background */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header & Hero Section */
+        header {
+            background-color: #FF9800; /* Warm Indian Orange */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.8em;
+            font-weight: 700;
+        }
+
+        header p {
+            margin-top: 5px;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #4CAF50; /* Fresh Green */
+            margin-bottom: 40px;
+            font-size: 2.2em;
+            position: relative;
+        }
+        
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #FF9800;
+            margin: 10px auto 0;
+        }
+
+        /* Menu Section */
+        #menu .menu-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .menu-item {
+            background: #e8f5e9; /* Very Light Green */
+            padding: 20px;
+            border-radius: 8px;
+            flex-basis: 90%; /* Full width on small screens */
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .menu-item h3 {
+            color: #4CAF50;
+            font-size: 1.4em;
+            margin-top: 0;
+        }
+        
+        .menu-item ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .menu-item li {
+            padding: 5px 0;
+            border-bottom: 1px dotted #ccc;
+        }
+        
+        .menu-item li:last-child {
+            border-bottom: none;
+        }
+
+        /* Pricing Section */
+        #pricing .pricing-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .price-card {
+            background-color: white;
+            border: 2px solid #FF9800;
+            padding: 30px;
+            border-radius: 12px;
+            flex-basis: 45%;
+            min-width: 280px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .price-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .price-card h3 {
+            color: #FF9800;
+            font-size: 1.8em;
+            margin-top: 0;
+        }
+
+        .price-tag {
+            font-size: 3em;
+            font-weight: 700;
+            color: #4CAF50;
+            margin: 10px 0;
+        }
+        
+        .rupee-symbol {
+            font-size: 0.7em;
+            vertical-align: top;
+            margin-right: 5px;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background-color: #f7f7f7;
+            text-align: center;
+            padding: 40px 20px;
+            border-radius: 8px;
+        }
+        
+        #contact p {
+            font-size: 1.2em;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            background-color: #388e3c;
+        }
+        
+        .whatsapp-button {
+            background-color: #25D366;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: #333;
+            color: #bbb;
+            font-size: 0.9em;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .price-card {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+            .cta-button {
+                display: block;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Swadisht Meals</h1>
+            <p>Your Daily Homemade Tiffin - Pure Taste, Zero Compromise.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <section id="menu">
+            <h2><i class="fas fa-utensils"></i> Today's Delicious Menu</h2>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <h3>Lunch Tiffin Special</h3>
+                    <ul>
+                        <li><i class="fas fa-dot-circle"></i> **Main:** 4 Soft Wheat Rotis or 3 Parathas</li>
+                        <li><i class="fas fa-dot-circle"></i> **Dal:** Homestyle Dal Tadka / Dal Fry</li>
+                        <li><i class="fas fa-dot-circle"></i> **Vegetable:** Seasonal Sabzi (e.g., Bhindi, Gobi, Beans)</li>
+                        <li><i class="fas fa-dot-circle"></i> **Staple:** Steamed White Rice</li>
+                        <li><i class="fas fa-dot-circle"></i> **Side:** Fresh Curd / Buttermilk & Salad</li>
+                    </ul>
+                </div>
+                <div class="menu-item">
+                    <h3>Dinner Tiffin Special</h3>
+                    <ul>
+                        <li><i class="fas fa-dot-circle"></i> **Main:** 4 Soft Wheat Rotis or 3 Parathas</li>
+                        <li><i class="fas fa-dot-circle"></i> **Gravy:** Special Paneer/Chole/Rajma (Weekly Rotation)</li>
+                        <li><i class="fas fa-dot-circle"></i> **Dry Veg:** A simple Seasonal Vegetable Stir-fry</li>
+                        <li><i class="fas fa-dot-circle"></i> **Staple:** Small portion of Jeera Rice</li>
+                        <li><i class="fas fa-dot-circle"></i> **Side:** Pickle (Achar) & Sweet (Once a week)</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 30px; font-style: italic; color: #555;">*Menu changes daily to ensure variety and fresh ingredients.</p>
+        </section>
+
+        <section id="pricing">
+            <h2><i class="fas fa-tags"></i> Simple & Affordable Pricing</h2>
+            <div class="pricing-cards">
+                <div class="price-card">
+                    <h3>Single Trial Tiffin</h3>
+                    <p class="price-tag"><span class="rupee-symbol">₹</span>80</p>
+                    <p>Perfect for a quick meal or to taste our quality.</p>
+                </div>
+                <div class="price-card">
+                    <h3>Monthly Subscription</h3>
+                    <p class="price-tag"><span class="rupee-symbol">₹</span>2000</p>
+                    <p>Our best value! 30 meals a month (Lunch or Dinner).</p>
+                </div>
+                <div class="price-card">
+                    <h3>Full Day Plan (Monthly)</h3>
+                    <p class="price-tag"><span class="rupee-symbol">₹</span>3800</p>
+                    <p>2 meals daily (Lunch + Dinner) for 30 days. Save more!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2><i class="fas fa-phone-alt"></i> How to Order</h2>
+            <p>Skip the high commissions. Order directly from us for the freshest meal and best price!</p>
+            
+            <p style="font-size: 1.8em; font-weight: bold; color: #4CAF50;">+91 98765 43210</p>
+            
+            <a href="tel:+919876543210" class="cta-button">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+            
+            <a href="https://wa.me/919876543210?text=Hello%2C%20I%20am%20interested%20in%20ordering%20a%20tiffin%20from%20Swadisht%20Meals." target="_blank" class="cta-button whatsapp-button">
+                <i class="fab fa-whatsapp"></i> WhatsApp Us
+            </a>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Swadisht Meals. Homemade food delivered with love in Warangal, Nashik, and surrounding areas.</p>
+    </footer>
+
+</body>
+</html>
